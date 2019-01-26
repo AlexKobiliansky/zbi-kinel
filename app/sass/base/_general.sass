@@ -13,7 +13,7 @@
   color: #666
 
 ::selection
-  background-color: $accent
+  background-color: $accent-blue
   color: #fff
 
 body
@@ -56,11 +56,61 @@ ul
   margin-bottom: 0
 
 //pixel-glass custom
-//html
-//  background-repeat: no-repeat
-//  background-position: 50% 0
-//  background-image: url('../img/layout/test.png')
+html
+  background-repeat: no-repeat
+  background-position: 50% 0
+  background-image: url('../img/templates/index.jpg')
 
 // ======= END TEMPLATE STYLES =======
 
 
+.btn
+  display: inline-block
+  +mt(.3s)
+  text-transform: uppercase
+  line-height: 1
+  white-space: nowrap
+  padding: 9px 20px
+  border-radius: 36px
+  border-width: 2px
+  border-style: solid
+  
+.btn-blue
+  background-color: #415878
+  border-color: #415878
+  &:hover
+    background-color: transparent
+    a
+      color: #415878
+
+//toggle-mnu
+.toggle-mnu
+  display: block
+  width: 28px
+  height: 28px
+  position: relative
+  top: 12px
+  left: 20px
+  span:after, span:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+  span:after
+    top: 18px
+  span
+    position: relative
+    display: block
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+  &.on span
+    background-color: transparent
+  &.on span:before
+    transform: rotate(45deg) translate(-1px, 0px)
+  &.on span:after
+    transform: rotate(-45deg) translate(6px, -7px)
