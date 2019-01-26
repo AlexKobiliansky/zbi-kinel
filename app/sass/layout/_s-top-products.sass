@@ -1,0 +1,40 @@
+.s-top-products
+  padding-top: 0
+
+.toppr-slider-wrap
+  text-align: center
+  .prod-slider
+    margin-bottom: 20px
+  .btn-blue
+    padding: 16px
+    width: 360px
+
+.prod-slider
+  position: relative
+  .owl-nav
+    position: absolute
+    width: 100%
+    bottom: -23px
+    button.owl-prev, button.owl-next
+      width: 20px
+      height: 44px
+      +bg-cover()
+    button.owl-prev
+      background-image: url('../img/icons/prod-prev.png')
+      position: absolute
+      left: calc(50% - 230px)
+    button.owl-next
+      background-image: url('../img/icons/prod-next.png')
+      position: absolute
+      right: calc(50% - 230px)
+
+.tizer
+  background-image: url('../img/bg-tizer.jpg')
+  +bg-cover()
+  text-align: center
+  font-family: "PFDinTextPro-Bold", sans-serif
+  font-size: 40px
+  color: #fff
+  text-transform: uppercase
+  padding: 30px 0 20px
+  margin-bottom: 35px

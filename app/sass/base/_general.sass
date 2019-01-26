@@ -75,13 +75,25 @@ html
   border-width: 2px
   border-style: solid
   
-.btn-blue
+.btn-blue, .btn-blue:active, .btn-blue:focus
   background-color: #415878
   border-color: #415878
+  color: #fff
   &:hover
     background-color: transparent
-    a
-      color: #415878
+    color: #415878
+
+section
+  padding: 35px 0
+
+.section-head
+  font-family: "ComfortaaRegular", sans-serif
+  font-size: 48px
+  text-transform: uppercase
+  text-align: center
+  margin-bottom: 25px
+  color: #092045
+
 
 //toggle-mnu
 .toggle-mnu
@@ -124,7 +136,7 @@ html
   position: fixed
   top: 300px
   right: 100px
-
+  z-index: 100
 .fix-item
   position: relative
   display: block
@@ -155,3 +167,26 @@ html
   opacity: 0
   z-index: -1
   +mt(.3s)
+
+//prod-slide
+.prod-slide
+  padding: 25px 25px 30px
+  display: block
+  text-align: center
+  text-transform: uppercase
+  font-family: "PTSans", sans-serif
+  font-size: 18px
+  color: #092045
+  +bg-cover()
+  background-image: url('../img/bg-prod-item.jpg')
+  border-radius: 10px
+  &-img
+    margin-bottom: 35px
+    display: flex
+    justify-content: center
+    align-items: center
+    img
+      display: inline!important
+      vertical-align: middle
+  &-title
+    display: inline-block
