@@ -5,6 +5,20 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .s-about
+    .section-head
+      font-size: 36px
+
+  .adv-slide-title
+    font-size: 32px
+
+  .about-form
+    .btn
+      width: 260px
+      margin-top: 10px
+      padding: 11px
+
   .fix-div
     right: 15px
     bottom: 15px
@@ -27,6 +41,19 @@
 // ≥992px
 +media-breakpoint-down(md)
 
+  .adv-wrap .owl-thumb-item:nth-child(2) .adv-item-title
+    padding-right: 0
+
+  .adv-item
+    &-img
+      width: 80px
+    &-title
+      font-size: 16px
+
+  .s-about
+    .section-head
+      font-size: 32px
+
   .section-head
     font-size: 36px
 
@@ -42,6 +69,24 @@
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .adv-wrap
+    margin-top: 50px
+
+  .adv-item-title
+    display: none
+
+  .about-form
+    label
+      width: 100%
+      margin-right: 0
+      margin-bottom: 15px
+      &:first-child
+        width: 100%
+    .btn
+      margin-top: 0
+      width: 100%
+      padding: 14px
 
   .section-head
     font-size: 32px
@@ -80,6 +125,14 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .s-about
+    .section-head
+      font-size: 22px
+
+  .adv-slide-title
+    font-size: 20px
+    margin-bottom: 10px
 
   .section-head
     font-size: 28px

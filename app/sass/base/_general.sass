@@ -10,7 +10,7 @@
     box-sizing: border-box
 
 ::placeholder
-  color: #666
+  color: #fff
 
 ::selection
   background-color: $accent-blue
@@ -74,6 +74,7 @@ html
   border-radius: 36px
   border-width: 2px
   border-style: solid
+  cursor: pointer
   
 .btn-blue, .btn-blue:active, .btn-blue:focus
   background-color: #415878
@@ -83,6 +84,16 @@ html
     background-color: transparent
     color: #415878
 
+.btn-darkblue, .btn-darkblue:active, .btn-darkblue:focus
+  background-color: #011536
+  color: #fff
+  border-color: #011536
+  &:hover
+    //background-color: transparent
+    //color: #011536
+    color: #fff
+    background-color: rgba(#011536, .7)
+    border-color: rgba(#011536, .7)
 section
   padding: 35px 0
 
@@ -190,3 +201,22 @@ section
       vertical-align: middle
   &-title
     display: inline-block
+
+
+form
+  label
+    display: block
+    &.has-error
+      input
+        color: rgb(185, 74, 72)
+        &::placeholder
+          color: rgb(185, 74, 72)
+  input
+    width: 100%
+    border: 1px solid #b5b6b8
+    line-height: 1
+    padding: 6px 10px
+    background-color: rgba(#000, .6)
+    color: #fff
+  .help-block
+    display: none
