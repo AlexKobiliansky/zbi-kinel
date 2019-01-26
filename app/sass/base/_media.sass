@@ -5,6 +5,14 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .intro
+    margin-top: 200px
+    font-size: 36px
+    span
+      font-size: 65px
+  .main-head
+    height: 515px
+
   .top-line
     padding-bottom: 18px
     .btn-wrap
@@ -13,9 +21,21 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+  .intro
+    text-align: left
+    margin-top: 115px
+  .main-head
+    height: 400px
+
 
 // ≥768px
 +media-breakpoint-down(sm)
+
+  .main-head
+    height: auto
+
+  .video
+    display: none
 
   header
     position: relative
@@ -39,6 +59,16 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .main-head
+    padding-bottom: 60px
+
+  .intro
+    font-size: 30px
+    margin-top: 60px
+    span
+      font-size: 48px
+
   .logo
     text-align: left
     .title

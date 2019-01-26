@@ -1,5 +1,7 @@
 header
   color: #fff
+  .container
+    position: relative
 
 .top-line
   padding-top: 18px
@@ -64,7 +66,42 @@ header
   margin-bottom: 10px
 
 .main-head
-  background-color: $accent-blue
+  position: relative
+  background-color: green
+  height: 680px
+  padding-bottom: 25px
+.header-bg
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  overflow: hidden
+  +bg-cover()
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(#000, .4)
+.video
+  width: 100%
+  height: auto
+  position: absolute
+
+
+
+.intro
+  margin-top: 350px
+  text-align: right
+  font-size: 46px
+  font-family: "PFDinTextPro-Bold", sans-serif
+  line-height: 1
+  text-transform: uppercase
+  span
+    font-size: 80px
 
 .mm-logo
   margin-left: auto
