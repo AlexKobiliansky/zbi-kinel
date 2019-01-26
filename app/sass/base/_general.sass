@@ -114,3 +114,44 @@ html
     transform: rotate(45deg) translate(-1px, 0px)
   &.on span:after
     transform: rotate(-45deg) translate(6px, -7px)
+
+//fix-div
+.fix-div
+  +bg-cover()
+  background-image: url('../img/bg-fix-div.png')
+  color: #afd5fb
+  display: inline-block
+  position: fixed
+  top: 300px
+  right: 100px
+
+.fix-item
+  position: relative
+  display: block
+  text-align: center
+  text-transform: uppercase
+  border-bottom: 1px solid #fff
+  +mt(.3s)
+  padding: 10px 10px 5px 10px
+  filter: none
+  img
+    display: block
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 10px
+  &:last-child
+    border-bottom: none
+  &:hover
+    &
+      .fix-item-bg
+        opacity: .4
+.fix-item-bg
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  background-color: #000
+  opacity: 0
+  z-index: -1
+  +mt(.3s)
