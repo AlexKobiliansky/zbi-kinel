@@ -1,5 +1,5 @@
 $(function() {
-    
+
     /**
      * mobile-mnu customization
      */
