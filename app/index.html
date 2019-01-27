@@ -27,6 +27,22 @@
 </head>
 
 <body class="ishome">
+<!-- preloader start -->
+<div class="preloader">
+	<div class="sk-cube-grid">
+		<div class="sk-cube sk-cube-1"></div>
+		<div class="sk-cube sk-cube-2"></div>
+		<div class="sk-cube sk-cube-3"></div>
+		<div class="sk-cube sk-cube-4"></div>
+		<div class="sk-cube sk-cube-5"></div>
+		<div class="sk-cube sk-cube-6"></div>
+		<div class="sk-cube sk-cube-7"></div>
+		<div class="sk-cube sk-cube-8"></div>
+		<div class="sk-cube sk-cube-9"></div>
+	</div>
+</div>
+<!-- preloader end -->
+
 <div id="page-container">
 	<!-- mobile menu -->
 	<nav id="mobile-mnu" data-logo="img/mmenu-logo.png">
@@ -69,7 +85,7 @@
 				<!-- /fix item -->
 
 				<!-- fix item -->
-				<a href="#0" class="fix-item">
+				<a href="#popup-form" class="fix-item">
 					<span class="fix-item-bg"></span>
 					<img src="img/fix-icon-3.png" alt="alt">
 					<span class="d-none d-md-block">Заказ</span>
@@ -107,7 +123,7 @@
 				</div>
 				<div class="btn-wrap">
 					<a href="tel:73472422812" class="head-s-phone d-block d-xl-none">+7 (347) 242-28-12</a>
-					<a href="#0" class="btn btn-blue">Заказать звонок</a>
+					<a href="#popup-form" class="btn btn-blue">Заказать звонок</a>
 				</div>
 			</div><!-- /top-line -->
 
@@ -475,7 +491,6 @@
 					}
 				});
 			</script>
-
 		</div>
 	</section>
 	<!-- ======= END SECTION MAP ======= -->
@@ -501,6 +516,36 @@
 	</footer>
 	<!-- ======= END FOOTER ======= -->
 
+	<div class="hidden">
+		<form class="contact-form popup-form" id="popup-form">
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="УЖБЗ-2">
+			<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+			<input type="hidden" name="form_subject" value="Заявка с сайта УЖБЗ-2">
+			<!-- END Hidden Required Fields -->
+
+			<h3>Заказать звонок</h3>
+			<p>Оставьте свои контакты и мы свяжемся с Вами в ближайшее время!</p>
+
+			<div class="form-labels-wrap">
+				<label>
+					<input type="text" placeholder="ФИО" name="Имя" autocomplete="off" data-validation="custom"
+						   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+						   data-validation-error-msg="* Укажите ваше имя">
+				</label>
+				<label>
+					<input type="text" class="user-phone" name="Телефон" placeholder="ТЕЛ"
+						   autocomplete="off" data-validation="custom"
+						   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+						   data-validation-error-msg="* Укажите ваш телефон">
+				</label>
+				<label>
+					<input type="text" data-validation-error-msg="* Укажите корректный email" data-validation="email" name="email" placeholder="EMAIL" autocomplete="off">
+				</label>
+				<button type="submit" class="btn btn-darkblue">Отправить</button>
+			</div>
+		</form>
+	</div>
 
 </div><!--/page container -->
 <script src="js/scripts.min.js"></script>
