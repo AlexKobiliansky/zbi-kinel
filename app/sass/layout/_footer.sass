@@ -1,0 +1,43 @@
+.main-foot
+  padding: 25px 0
+  color: #325da0
+  text-align: right
+  font-size: 16px
+  line-height: 1.5
+  a
+    +mt(.3s)
+    &:hover
+      color: #afd5fb
+
+.foot-text
+  display: inline-block
+  position: relative
+  top: 10px
+  vertical-align: top
+  margin-right: 20px
+
+.foot-soc
+  display: inline-block
+  a
+    display: inline-block
+    margin-right: 18px
+    &:last-child
+      margin-right: 0
+    .svg
+      fill: #325da0
+      +mt(.3s)
+    &:hover
+      .svg
+        fill: #afd5fb
+
+.foot-wrap
+  padding-top: 25px
+  position: relative
+  &:before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 9px
+    background-color: #325da0
+    left: 0
+    top: 0
