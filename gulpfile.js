@@ -39,7 +39,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
-		'app/libs/pixel-glass/pixel-glass.js',
+		// 'app/libs/pixel-glass/pixel-glass.js',
 		'app/libs/mmenu/jquery.mmenu.all.js',
 		'app/libs/owl-carousel/owl.carousel.min.js',
 		'app/libs/owl-carousel/owl.carousel2.thumbs.min.js',

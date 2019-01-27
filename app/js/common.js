@@ -43,7 +43,8 @@ $(function() {
         });
 
         function heightses() {
-            if ($(window).width()>480) {
+            if ($(window).width()>768) {
+                $('.news-item-title').height('auto').equalHeights();
             }
             $('.prod-slide-img').height('auto').equalHeights();
             $('.prod-slide-title').height('auto').equalHeights();
