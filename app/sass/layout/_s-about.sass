@@ -1,4 +1,9 @@
 .s-about
+  position: relative
+  padding-bottom: 50px
+  .container
+    position: relative
+    z-index: 2
   +bg-cover()
   color: #fff
   .section-head
@@ -6,6 +11,15 @@
     text-align: left
     font-family: "PTSans", sans-serif
     font-weight: 700
+  &:after
+    position: absolute
+    content: ''
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background-color: #000
+    opacity: .4
 
 .about-form
   label
@@ -27,7 +41,6 @@
 .adv-item
   display: table
   margin-bottom: 30px
-  cursor: pointer
   +mt(2s)
   &-img
     display: table-cell
@@ -41,11 +54,15 @@
     text-transform: uppercase
     line-height: 1.4
 
-.adv-slider
+.about-slider
   margin-top: 25px
+  position: relative
   .owl-dots
-    margin-top: 30px
+    //margin-top: 30px
     text-align: center
+    position: relative
+    bottom: 50px
+    width: 100%
     button.owl-dot
       height: 13px
       width: 13px

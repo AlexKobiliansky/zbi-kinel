@@ -26,33 +26,51 @@ $(function() {
             }
         });
 
-        $('.adv-slider').owlCarousel({
-            thumbs: true,
-            thumbsPrerendered: true,
-            thumbItemClass: 'owl-thumb-item',
+        /**
+         * ABOUT-SLIDER BEHAVIOUR
+         * @type {*|jQuery}
+         */
+        var aboutSlider = $('.about-slider').owlCarousel({
+            loop: true,
             items: 1,
             animateIn: "fadeIn",
-            responsive : {
-                0 : {
-                    autoHeight:true
-                },
-                480 : {
-                    autoHeight:false
-                }
-            }
+            animateOut: "fadeOut",
+            autoplay: true,
+            autoplayTimeout: 9000,
+            mouseDrag: false,
+            touchDrag: false
         });
 
-        function heightses() {
-            if ($(window).width()>768) {
-                $('.news-item-title').height('auto').equalHeights();
-            }
-            $('.prod-slide-img').height('auto').equalHeights();
-            $('.prod-slide-title').height('auto').equalHeights();
+        var aboutSliderData = aboutSlider.data();
+
+        if(aboutSliderData) {
+            var carouselOptions = aboutSliderData['owl.carousel'].options;
+            var input = $('.s-about input');
+
+            input.each(function(){
+                $(this).focus(function(){
+                    carouselOptions.autoplay = false;
+                    aboutSlider.trigger('refresh.owl.carousel');
+                });
+            });
+
+            input.each(function(){
+                $(this).blur(function(){
+                    carouselOptions.autoplay = true;
+                    aboutSlider.trigger('refresh.owl.carousel');
+                });
+            });
         }
+
+        /**
+         * end ABOUT-SLIDER BEHAVIOUR
+         */
+
 
         $(window).resize(function() {
             heightses();
         });
+
         heightses();
 
         $('.preloader').fadeOut(600);
@@ -69,10 +87,7 @@ $(function() {
                     zoom: zoom
                 }),
 
-                myPlacemark = new ymaps.Placemark(map.getCenter(), {
-                    hintContent: 'Собственный значок метки',
-                    balloonContent: 'Это красивая метка'
-                }, {
+                myPlacemark = new ymaps.Placemark(map.getCenter(), {}, {
                     // Опции.
                     // Необходимо указать данный тип макета.
                     iconLayout: 'default#image',
@@ -92,8 +107,22 @@ $(function() {
                 map.behaviors.disable('drag');
             }
         });
-
     });
+
+
+    function heightses() {
+        if ($(window).width()>768) {
+            $('.news-item-title').height('auto').equalHeights();
+        }
+        $('.prod-slide-img').height('auto').equalHeights();
+        $('.prod-slide-title').height('auto').equalHeights();
+
+        $('.s-about').height('auto').equalHeights();
+
+
+    }
+
+
 
     /**
      * mobile-mnu customization

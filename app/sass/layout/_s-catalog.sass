@@ -1,0 +1,22 @@
+.s-catalog
+
+.catalog-wrap
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  height: 275px
+  border-bottom: 2px solid #d0d0d0
+
+.catalog-item
+  font-size: 16px
+  margin-bottom: 10px
+  +mt(.3s)
+  display: inline-block
+  width: 40%
+  padding-right: 20px
+  a
+    &:hover
+      color: $accent-blue
+      text-decoration: underline
+  &.active
+    font-weight: bold
