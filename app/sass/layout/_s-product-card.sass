@@ -1,0 +1,96 @@
+.s-product-card
+  padding-top: 0
+  padding-bottom: 0
+
+.prod-img
+  width: 263px
+  height: 187px
+  display: table-cell
+  text-align: center
+  vertical-align: middle
+  img
+    display: inline-block
+
+.prod-title
+  display: table-cell
+  vertical-align: middle
+  padding-left: 25px
+  font-size: 30px
+  text-transform: uppercase
+  font-weight: 700
+
+table.prod-table
+  thead
+    background-color: #ebebeb
+    text-align: center
+    vertical-align: top
+    font-weight: normal
+  th
+    padding: 18px 10px 0
+    font-weight: normal
+  tr.sub-th
+    th
+      padding: 0 0 12px
+  td
+    padding: 12px 10px
+    text-align: center
+    &:first-child
+      width: 220px
+      span
+        display: inline-block
+        margin-bottom: 10px
+  .prod-table-desc
+    border-bottom: 1px solid #d0d0d0
+    text-align: left
+    padding-left: 0
+    background-color: #fff
+  tbody
+    tr
+      background-color: #fff
+      &:nth-child(even)
+        background-color: #f9f8f8
+
+.prod-table-item
+  width: 100%
+  thead
+    display: none
+  td
+    display: none
+    &.prod-table-desc
+      display: table-cell
+      .prod-hidden-desc
+        display: none
+
+  &.active
+    table
+      width: 100%
+    thead
+      display: table-header-group
+    td
+      display: table-cell
+
+.tablesaw-swipe .tablesaw-swipe-cellpersist
+  border-right: none
+
+
+.last-mark
+  border-bottom: 1px solid #d0d0d0
+
+.tablesaw-advance
+  text-align: right
+  float: none
+  display: none
+  margin-bottom: 10px
+
+.tablesaw-advance .tablesaw-btn.btn-micro
+  padding: 12px 20px
+
+.tablesaw-advance a.tablesaw-nav-btn.right:before
+  border-left: 14px solid grey
+
+.tablesaw-advance a.tablesaw-nav-btn.left:before
+  border-right: 14px solid grey
+
+.tablesaw-advance a.tablesaw-nav-btn.left:before, .tablesaw-advance a.tablesaw-nav-btn.right:before
+  top: calc(50% - 5px)
+  left: calc(50% - 7px)

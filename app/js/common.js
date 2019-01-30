@@ -116,6 +116,8 @@ $(function() {
         }
         $('.prod-slide-img').height('auto').equalHeights();
         $('.prod-slide-title').height('auto').equalHeights();
+        $('.int-item-img').height('auto').equalHeights();
+        $('.int-item-title').height('auto').equalHeights();
 
         $('.s-about').height('auto').equalHeights();
 
