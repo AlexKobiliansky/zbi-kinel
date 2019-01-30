@@ -60,9 +60,7 @@
 	<!-- ======= HEADER ======= -->
 	<header class="main-head">
 		<div class="header-bg" style="background-image: url('img/header-bg.jpg');">
-			<video class="video" preload loop="loop" muted autoplay width="300" height="150">
-				<source src="img/testvideo.mp4" type="video/mp4">
-			</video>
+			<video class="video" id="video" loop muted src="img/video.mp4"></video>
 		</div>
 
 		<div class="container">
@@ -127,15 +125,15 @@
 				</div>
 			</div><!-- /top-line -->
 
-			<div class="intro">
-				<div class="row">
-					<div class="col-lg-6 col-xl-5">
-						в год <br>
-						<span>93 000 м2</span><br>
-						товарного бетона
-					</div>
-				</div>
-			</div>
+			<!--<div class="intro">-->
+				<!--&lt;!&ndash;<div class="row">&ndash;&gt;-->
+					<!--&lt;!&ndash;<div class="col-lg-6 col-xl-5">&ndash;&gt;-->
+						<!--&lt;!&ndash;в год <br>&ndash;&gt;-->
+						<!--&lt;!&ndash;<span>93 000 м2</span><br>&ndash;&gt;-->
+						<!--&lt;!&ndash;товарного бетона&ndash;&gt;-->
+					<!--&lt;!&ndash;</div>&ndash;&gt;-->
+				<!--&lt;!&ndash;</div>&ndash;&gt;-->
+			<!--</div>-->
 		</div>
 	</header>
 	<!-- ======= END HEADER ======= -->
@@ -144,7 +142,9 @@
 	<section class="s-top-products">
 		<div class="tizer">
 			<div class="container">
-				Закажи сейчас и храни бесплатно!
+				<div class="marquee">
+					Закажи сейчас и храни бесплатно!
+				</div>
 			</div>
 		</div>
 
@@ -216,6 +216,7 @@
 
 	<!-- ======= SECTION ABOUT ======= -->
 	<div class="about-slider owl-carousel" id="about-slider">
+		<!-- slide start -->
 		<section class="s-about" style="background-image: url('img/bg-about-1.jpg');">
 			<div class="container">
 				<div class="row">
@@ -316,20 +317,20 @@
 				<div class="row">
 					<div class="col-xl-10">
 						<div class="adv-slider" data-slider-id="adv-slider">
-							<!-- slide start -->
 							<div class="adv-slide">
 								<div class="adv-slide-title">Работаем по госту</div>
 								<div class="adv-slide-desc">
 									<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Равным образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
 								</div>
 							</div>
-							<!-- slide end -->
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
+		<!-- slide end -->
 
+		<!-- slide start -->
 		<section class="s-about" style="background-image: url('img/bg-about-2.jpg');">
 			<div class="container">
 				<div class="row">
@@ -443,7 +444,9 @@
 				</div>
 			</div>
 		</section>
+		<!-- slide end -->
 
+		<!-- slide start -->
 		<section class="s-about" style="background-image: url('img/bg-about-3.jpg');">
 			<div class="container">
 				<div class="row">
@@ -557,6 +560,239 @@
 				</div>
 			</div>
 		</section>
+		<!-- slide end -->
+
+		<!-- slide start -->
+		<section class="s-about" style="background-image: url('img/bg-about-4.jpg');">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10">
+						<div class="section-head">Открытое акционерное общество «Уфимский Железобетонный Завод-2»</div>
+						<p>ОАО «УЖБЗ-2» является одним из основных поставщиков железобетонных и бетонных изделий на строительном рынке Башкортостана, одним из крупнейших предприятий в Уфе. Производственные мощности предприятия  позволяют производить в  год  до 121 000 м3 сборного железобетона и 93 000 м3 бетона товарного.</p>
+
+						<!-- form start -->
+						<form class="contact-form about-form">
+
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="УЖБЗ-2">
+							<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+							<input type="hidden" name="form_subject" value="Заявка с сайта УЖБЗ-2">
+							<!-- END Hidden Required Fields -->
+
+							<div class="form-labels-wrap">
+								<label>
+									<input type="text" placeholder="ФИО" name="Имя" autocomplete="off" data-validation="custom"
+										   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+										   data-validation-error-msg="* Укажите ваше имя">
+								</label>
+								<label>
+									<input type="text" class="user-phone" name="Телефон" placeholder="ТЕЛ"
+										   autocomplete="off" data-validation="custom"
+										   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+										   data-validation-error-msg="* Укажите ваш телефон">
+								</label>
+								<label>
+									<input type="text" data-validation-error-msg="* Укажите корректный email" data-validation="email" name="email" placeholder="EMAIL" autocomplete="off">
+								</label>
+								<button type="submit" class="btn btn-darkblue">Отправить</button>
+							</div>
+						</form>
+						<!-- form end -->
+					</div>
+				</div>
+
+				<div class="adv-wrap" >
+					<div class="row owl-thumbs" data-slider-id="adv-slider">
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-1.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Работаем по госту</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-2.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Отливка производится в современных цехах</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-3.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Подъездные дорожные пути</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-4.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Свой парк спец. техники</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-5.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Своя лаборатория</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xl-10">
+						<div class="adv-slider" data-slider-id="adv-slider">
+							<!-- slide start -->
+							<div class="adv-slide">
+								<div class="adv-slide-title">Cвой парк спец. техники</div>
+								<div class="adv-slide-desc">
+									<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Равным образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+								</div>
+							</div>
+							<!-- slide end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- slide end -->
+
+		<!-- slide start -->
+		<section class="s-about" style="background-image: url('img/bg-about-5.jpg');">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-10">
+						<div class="section-head">Открытое акционерное общество «Уфимский Железобетонный Завод-2»</div>
+						<p>ОАО «УЖБЗ-2» является одним из основных поставщиков железобетонных и бетонных изделий на строительном рынке Башкортостана, одним из крупнейших предприятий в Уфе. Производственные мощности предприятия  позволяют производить в  год  до 121 000 м3 сборного железобетона и 93 000 м3 бетона товарного.</p>
+
+						<!-- form start -->
+						<form class="contact-form about-form">
+
+							<!-- Hidden Required Fields -->
+							<input type="hidden" name="project_name" value="УЖБЗ-2">
+							<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+							<input type="hidden" name="form_subject" value="Заявка с сайта УЖБЗ-2">
+							<!-- END Hidden Required Fields -->
+
+							<div class="form-labels-wrap">
+								<label>
+									<input type="text" placeholder="ФИО" name="Имя" autocomplete="off" data-validation="custom"
+										   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,20}$"
+										   data-validation-error-msg="* Укажите ваше имя">
+								</label>
+								<label>
+									<input type="text" class="user-phone" name="Телефон" placeholder="ТЕЛ"
+										   autocomplete="off" data-validation="custom"
+										   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}"
+										   data-validation-error-msg="* Укажите ваш телефон">
+								</label>
+								<label>
+									<input type="text" data-validation-error-msg="* Укажите корректный email" data-validation="email" name="email" placeholder="EMAIL" autocomplete="off">
+								</label>
+								<button type="submit" class="btn btn-darkblue">Отправить</button>
+							</div>
+						</form>
+						<!-- form end -->
+					</div>
+				</div>
+
+				<div class="adv-wrap" >
+					<div class="row owl-thumbs" data-slider-id="adv-slider">
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-1.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Работаем по госту</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-2.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Отливка производится в современных цехах</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-3.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Подъездные дорожные пути</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-4.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Свой парк спец. техники</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+
+						<!-- adv-item start -->
+						<div class="col-4 col-sm col-md-6 col-lg-4 owl-thumb-item">
+							<div class="adv-item">
+								<div class="adv-item-img">
+									<img src="img/adv-img-5.png" alt="alt" class="img-responsive">
+								</div>
+								<div class="adv-item-title">Своя лаборатория</div>
+							</div>
+						</div>
+						<!-- adv-item end -->
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-xl-10">
+						<div class="adv-slider" data-slider-id="adv-slider">
+							<!-- slide start -->
+							<div class="adv-slide">
+								<div class="adv-slide-title">Своя лаборатория</div>
+								<div class="adv-slide-desc">
+									<p>Значимость этих проблем настолько очевидна, что дальнейшее развитие различных форм деятельности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Равным образом рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
+								</div>
+							</div>
+							<!-- slide end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- slide end -->
 	</div>
 	<!-- ======= END SECTION ABOUT ======= -->
 

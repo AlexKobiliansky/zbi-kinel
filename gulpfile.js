@@ -52,6 +52,8 @@ gulp.task('scripts', function() {
 		'app/libs/photoswipe/jquery.photoswipe.js',
 		'app/libs/tablesaw/tablesaw.jquery.js',
 		'app/libs/tablesaw/tablesaw-init.js',
+		'app/libs/video-js/video.min.js',
+		'app/libs/simplemarquee/jquery.marquee.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
