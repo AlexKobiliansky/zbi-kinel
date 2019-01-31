@@ -304,7 +304,7 @@ $(function() {
 
 
     //E-mail Ajax Send
-    $("form").submit(function() { //Change
+    $(".contact-form").submit(function() { //Change
         var th = $(this);
         t = th.find(".btn").text();
         th.find(".btn").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
