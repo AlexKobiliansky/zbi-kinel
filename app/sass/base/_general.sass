@@ -70,10 +70,27 @@ h3
 
 .s-page
   font-size: 18px
+  li:before
+    content: '\2013'
+    line-height: 1.4
+    position: relative
+    display: inline-block
+    margin-right: 8px
+  ul
+    margin-bottom: 30px
+  .small-text
+    font-size: 14px
 
 .s-single
   p
     text-indent: 1.5rem
+
+.s-page, .s-single, .s-about
+  a
+    color: $accent-blue
+    text-decoration: underline
+    &:hover
+      text-decoration: none
 
 .btn
   display: inline-block
@@ -297,7 +314,7 @@ form
     opacity: 0
     transition: opacity 0.5s ease-out
   &.mfp-ready.mfp-bg
-    opacity: .7
+    opacity: .2
   &.mfp-removing.mfp-bg
     opacity: 0
 

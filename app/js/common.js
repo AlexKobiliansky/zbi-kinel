@@ -61,7 +61,6 @@ $(function() {
                 });
             });
         }
-
         /**
          * end ABOUT-SLIDER BEHAVIOUR
          */
@@ -177,11 +176,13 @@ $(function() {
      $('.article-item').each(function(){
         var th = $(this);
 
-        th.find('.article-item-title').on('click', function(){
+        th.find('.article-item-title').on('click', function(e){
+            e.preventDefault();
             th.addClass('active');
         });
 
-       th.find('.article-rollup').on('click', function(){
+       th.find('.article-rollup').on('click', function(e){
+           e.preventDefault();
            th.removeClass('active');
        })
      });
@@ -299,8 +300,6 @@ $(function() {
 
 
     $('.docs-wrap').photoswipe();
-
-
 
 
     //E-mail Ajax Send
