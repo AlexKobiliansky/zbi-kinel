@@ -22,6 +22,8 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 
+    <link rel="preload" href="fonts/RobotoMedium/RobotoMedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/PTSansBold/PTSansBold.woff" as="font" type="font/woff" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.min.css">
 
 </head>
@@ -45,7 +47,7 @@
 
 <div id="page-container">
 	<!-- mobile menu -->
-	<nav id="mobile-mnu" data-logo="img/mmenu-logo.png">
+	<nav id="mobile-mnu" data-logo="img/mmenu-logo.jpg">
 		<ul>
 			<li><a href="#0">Главная</a></li>
 			<li><a href="#0">Каталог</a></li>
@@ -59,8 +61,13 @@
 
 	<!-- ======= HEADER ======= -->
 	<header class="main-head">
-		<div class="header-bg" style="background-image: url('img/header-bg.jpg');">
-			<video class="video" id="video" loop muted src="img/video.mp4"></video>
+		<div class="header-bg" style="background-image: url('img/header-bg-1.jpg');">
+			<video class="video" id="video" loop muted autoplay src="img/video-ilya.mp4"></video>
+		</div>
+
+		<div class="scroll">
+			<p>Вниз</p>
+			<a href="#top-products"><img src="img/scroll.png" alt="alt"></a>
 		</div>
 
 		<div class="container">
@@ -139,7 +146,7 @@
 	<!-- ======= END HEADER ======= -->
 
 	<!-- ======= SECTION TOP PRODUCTS ======= -->
-	<section class="s-top-products">
+	<section class="s-top-products" id="top-products">
 		<div class="tizer">
 			<div class="container">
 				<div class="marquee">
@@ -155,7 +162,7 @@
 					<!-- slide start -->
 					<a href="#0" class="prod-slide">
 						<span class="prod-slide-img">
-							<img src="img/prod-img-1.png" alt="alt" class="img-responsive">
+							<img src="img/prod-img/prod-lestnichnue_marshu-1.jpg" alt="alt" class="img-responsive">
 						</span>
 						<span class="prod-slide-title">
 							Лестничные марши
@@ -166,7 +173,7 @@
 					<!-- slide start -->
 					<a href="#0" class="prod-slide">
 						<span class="prod-slide-img">
-							<img src="img/prod-img-2.png" alt="alt" class="img-responsive">
+							<img src="img/prod-img/prod-plitu_perekrutia.png" alt="alt" class="img-responsive">
 						</span>
 						<span class="prod-slide-title">
 							Плиты перекрытия
@@ -177,7 +184,7 @@
 					<!-- slide start -->
 					<a href="#0" class="prod-slide">
 						<span class="prod-slide-img">
-							<img src="img/prod-img-3.png" alt="alt" class="img-responsive">
+							<img src="img/prod-img/prod-peremuchki.png" alt="alt" class="img-responsive">
 						</span>
 						<span class="prod-slide-title">
 							Перемычки и дорожные плиты
@@ -188,7 +195,7 @@
 					<!-- slide start -->
 					<a href="#0" class="prod-slide">
 						<span class="prod-slide-img">
-							<img src="img/prod-img-4.png" alt="alt" class="img-responsive">
+							<img src="img/prod-img/prod-svai_zhelezobetonnue.png" alt="alt" class="img-responsive">
 						</span>
 						<span class="prod-slide-title">
 							Сваи
@@ -797,31 +804,67 @@
 	<!-- ======= END SECTION ABOUT ======= -->
 
 	<!-- ======= SECTION PARTNERS ======= -->
+	<!--<section class="s-partners">-->
+		<!--<div class="container">-->
+			<!--<div class="section-head">-->
+				<!--Партнеры-->
+			<!--</div>-->
+			<!--<div class="row partners-wrap">-->
+				<!--&lt;!&ndash; partner item &ndash;&gt;-->
+				<!--<div class="col-md-6 partner-item-wrap">-->
+					<!--<div class="partner-item">-->
+						<!--<img src="img/partner-img-1.png" alt="alt" class="img-responsive">-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--&lt;!&ndash; /partner item &ndash;&gt;-->
+
+				<!--<div class="col-md-6 partner-item-wrap">-->
+					<!--&lt;!&ndash; partner item &ndash;&gt;-->
+					<!--<div class="partner-item">-->
+						<!--<img src="img/partner-img-2.png" alt="alt" class="img-responsive">-->
+					<!--</div>-->
+					<!--&lt;!&ndash; /partner item &ndash;&gt;-->
+				<!--</div>-->
+
+			<!--</div>-->
+		<!--</div>-->
+	<!--</section>-->
+
+
 	<section class="s-partners">
 		<div class="container">
 			<div class="section-head">
 				Партнеры
 			</div>
-			<div class="row partners-wrap">
+			<div class="partners-wrap owl-carousel">
 				<!-- partner item -->
-				<div class="col-md-6 partner-item-wrap">
+				<div class="partner-item-wrap">
 					<div class="partner-item">
 						<img src="img/partner-img-1.png" alt="alt" class="img-responsive">
 					</div>
 				</div>
 				<!-- /partner item -->
 
-				<div class="col-md-6 partner-item-wrap">
-					<!-- partner item -->
+				<!-- partner item -->
+				<div class="partner-item-wrap">
 					<div class="partner-item">
 						<img src="img/partner-img-2.png" alt="alt" class="img-responsive">
 					</div>
-					<!-- /partner item -->
 				</div>
+				<!-- /partner item -->
 
+				<!-- partner item -->
+				<div class="partner-item-wrap">
+					<div class="partner-item">
+						<img src="img/logo.png" alt="alt" class="img-responsive">
+					</div>
+				</div>
+				<!-- /partner item -->
 			</div>
 		</div>
 	</section>
+
+
 	<!-- ======= END SECTION PARTNERS ======= -->
 
 	<!-- ======= SECTION NEWS ======= -->
@@ -895,15 +938,15 @@
 				<div class="foot-text">
 					450027, г. Уфа, Индустриальное шоссе, 4.<br>Тел. отдела продаж: <a href="tel:73472422812">+7   (347) 242-28-12</a>
 				</div>
-				<div class="foot-soc">
-					<a href="#0" target="_blank">
-						<img src="img/icons/icon-vk.svg" alt="alt" class="svg">
-					</a>
+				<!--<div class="foot-soc">-->
+					<!--<a href="#0" target="_blank">-->
+						<!--<img src="img/icons/icon-vk.svg" alt="alt" class="svg">-->
+					<!--</a>-->
 
-					<a href="#0" target="_blank">
-						<img src="img/icons/icon-insta.svg" alt="alt" class="svg">
-					</a>
-				</div>
+					<!--<a href="#0" target="_blank">-->
+						<!--<img src="img/icons/icon-insta.svg" alt="alt" class="svg">-->
+					<!--</a>-->
+				<!--</div>-->
 			</div>
 		</div>
 	</footer>

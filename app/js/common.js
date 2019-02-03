@@ -1,5 +1,56 @@
 $(function() {
 
+    function hidePreload() {
+        $('.preloader').fadeOut(600);
+    }
+
+    /**
+     * VIDEO IN HEADER
+     */
+
+    if ($(window).width()>768) {
+        var video = $("video").get(0);
+        if(video) {
+            video.play();
+        } else {
+            hidePreload();
+        }
+    } else {
+        hidePreload();
+    }
+
+    hidePreload();
+
+
+    // if ($(window).width()>768) {
+    //     var video = $("video").get(0);
+    //
+    //         if(video) {
+    //             $(window).scroll(function () {
+    //                 if ($(this).scrollTop() > 700)  {
+    //                     video.volume = 0;
+    //                 } else {
+    //                     video.volume = 1;
+    //                 }
+    //             });
+    //
+    //             video.play();
+    //             if (video.paused){
+    //                 location.reload();
+    //             } else {
+    //                 hidePreload()
+    //             }
+    //         } else {
+    //             hidePreload()
+    //         }
+    //     } else {
+    //         hidePreload()
+    //     }
+    /**
+     * end VIDEO IN HEADER
+     */
+
+
     $(window).on('load', function (){
 
         $('.adv-wrap .owl-thumb-item:nth-child(2)').addClass('col-lg-8');
@@ -72,66 +123,27 @@ $(function() {
 
         heightses();
 
-        function hidePreload() {
-            $('.preloader').fadeOut(600);
-        }
-        
 
-        /**
-         * VIDEO IN HEADER
-         */
-        if ($(window).width()>768) {
-            var video = $("video").get(0);
-            if(video) {
-                video.play();
-                if (video.paused){
-                    location.reload();
-                } else {
-                    hidePreload()
-                }
-            } else {
-                hidePreload()
-            }
-        } else {
-            hidePreload()
-        }
-        /**
-         * end VIDEO IN HEADER
-         */
 
-        ymaps.ready(function(){
-            var mapId = $('#map'),
-                attitude = mapId.data("att"),
-                longtitude = mapId.data("long"),
-                zoom = mapId.data("zoom"),
-                marker = mapId.data("marker"),
-                map = new ymaps.Map("map", {
-                    center: [attitude, longtitude],
-                    controls: ['zoomControl'],
-                    zoom: zoom
-                }),
 
-                myPlacemark = new ymaps.Placemark(map.getCenter(), {}, {
-                    // Опции.
-                    // Необходимо указать данный тип макета.
-                    iconLayout: 'default#image',
-                    // Своё изображение иконки метки.
-                    iconImageHref: marker,
-                    // Размеры метки.
-                    iconImageSize: [26.6, 42.4],
-                    // Смещение левого верхнего угла иконки относительно
-                    // её "ножки" (точки привязки).
-                    iconImageOffset: [-16, -30]
-                });
-
-            map.geoObjects.add(myPlacemark);
-            map.behaviors.disable('scrollZoom');
-
-            if ($(window).width() <= 480) {
-                map.behaviors.disable('drag');
-            }
-        });
     }); // end onload
+
+
+    $('.partners-wrap').owlCarousel({
+        loop:true,
+        margin:30,
+        nav:true,
+        navText: ["", ""],
+        items: 2,
+        responsive : {
+            0 : {
+                items: 1,
+            },
+            768 : {
+                items: 2
+            }
+        }
+    });
 
     $('.marquee').bind('finished', function () {
         //
@@ -302,6 +314,41 @@ $(function() {
     $('.docs-wrap').photoswipe();
 
 
+    $(".scroll a").mPageScroll2id();
+
+    ymaps.ready(function(){
+        var mapId = $('#map'),
+            attitude = mapId.data("att"),
+            longtitude = mapId.data("long"),
+            zoom = mapId.data("zoom"),
+            marker = mapId.data("marker"),
+            map = new ymaps.Map("map", {
+                center: [attitude, longtitude],
+                controls: ['zoomControl'],
+                zoom: zoom
+            }),
+
+            myPlacemark = new ymaps.Placemark(map.getCenter(), {}, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: marker,
+                // Размеры метки.
+                iconImageSize: [26.6, 42.4],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-16, -30]
+            });
+
+        map.geoObjects.add(myPlacemark);
+        map.behaviors.disable('scrollZoom');
+
+        if ($(window).width() <= 480) {
+            map.behaviors.disable('drag');
+        }
+    });
+
     //E-mail Ajax Send
     $(".contact-form").submit(function() { //Change
         var th = $(this);
@@ -311,7 +358,7 @@ $(function() {
 
         $.ajax({
             type: "POST",
-            url: "mail.php", //Change
+            url: "/mail.php", //Change
             data: th.serialize()
         }).done(function() {
             setTimeout(function() {
@@ -322,4 +369,7 @@ $(function() {
         });
         return false;
     });
+
+
+
 });

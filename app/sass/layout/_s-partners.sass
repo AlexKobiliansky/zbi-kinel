@@ -6,4 +6,22 @@
   display: flex
   align-items: center
   justify-content: center
+  position: relative
 
+.partners-wrap
+  .owl-nav
+    position: absolute
+    width: 100%
+    top: calc(50% - 22px)
+    button.owl-prev, button.owl-next
+      width: 20px
+      height: 44px
+      +bg-cover()
+    button.owl-prev
+      background-image: url('../img/icons/prod-prev.png')
+      position: absolute
+      left: 25px
+    button.owl-next
+      background-image: url('../img/icons/prod-next.png')
+      position: absolute
+      right: 25px

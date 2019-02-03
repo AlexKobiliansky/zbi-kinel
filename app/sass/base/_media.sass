@@ -24,6 +24,18 @@
 // ≥1200px
 +media-breakpoint-down(lg)
 
+  .partners-wrap
+    .owl-nav
+      button.owl-prev
+        left: -20px
+      button.owl-next
+        background-image: url('../img/icons/prod-next.png')
+        position: absolute
+        right: -20px
+
+  .scroll
+    bottom: 20px
+
   .developer-block
     top: auto
     bottom: -50px
@@ -68,6 +80,18 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .partners-wrap
+    .owl-nav
+      button.owl-prev
+        left: -40px
+      button.owl-next
+        background-image: url('../img/icons/prod-next.png')
+        position: absolute
+        right: -40px
+
+  .scroll
+    display: none
 
   .article-item
     &-img
@@ -206,8 +230,6 @@
   .fix-item
     padding: 7px
     img
-      width: 20px
-      height: 20px
       margin-bottom: 0
   .main-head
     height: auto
@@ -237,6 +259,18 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .partners-wrap
+    margin-bottom: 50px
+    .owl-nav
+      top: auto
+      bottom: 25px
+      button.owl-prev
+        left: 50px
+      button.owl-next
+        background-image: url('../img/icons/prod-next.png')
+        position: absolute
+        right: 50px
 
   .searchform
     .btn-search
@@ -324,9 +358,9 @@
   .prod-slider
     .owl-nav
       button.owl-prev
-        left: 25px
+        left: 35px
       button.owl-next
-        right: 25px
+        right: 35px
 
   .tizer
     font-size: 24px
